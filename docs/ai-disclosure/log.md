@@ -1,0 +1,10 @@
+# Generative AI use log
+
+Record each substantial AI interaction used in project work. Review generated material and keep evidence of verification.
+
+| Date | Tool | Purpose | Prompt summary | What was used | How verified |
+|---|---|---|---|---|---|
+| 2026-10-21 | OpenAI Codex | Create the initial local shopping-assistant web prototype | Build a starter FastAPI page for the agreed AI shopping assistant idea, with a synthetic catalog and safe text rendering | Initial FastAPI app, static page, styles, JavaScript, and project setup documentation | Viktor should review and explain each file; run locally and inspect behavior before extending it |
+| 2026-10-21 | OpenAI Codex | Refine the storefront and repository setup | Make the storefront feel more intentional and remove unnecessary project setup while keeping the local Python backend | Reworked storefront copy/layout/styles, local illustrations, category filtering and bag count; pinned Python dependencies; updated README and Git ignore rules | Reviewed the changed source and repository files; restarted Uvicorn successfully after the edits. No automated tests were run in this session. |
+| 2026-10-21 | OpenAI Codex | Add multi-page storefront flows | Build pages for shopping, product details, bag, demo checkout, approach, contact, and privacy while keeping all activity local | Shared Jinja page shell, page templates, local cart/contact interactions, FastAPI page routes, and dependency updates | FastAPI server started successfully and loaded the application. Browser review remains to be done by Viktor. No automated tests were run in this session. |
+| 2026-10-21 | OpenAI Codex | Review engineering structure | Review the storefront for maintainability and make focused engineering improvements | Extracted typed immutable catalog and search module, explicit API response models, whitespace validation, centralized response security headers, engineering working agreement, README source map, and corrected terminal access-log privacy note | Reviewed source changes and project structure. Automated tests and full browser review have not been run; Viktor should inspect and explain the changes. |

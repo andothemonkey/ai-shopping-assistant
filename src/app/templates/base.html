@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f7f5f0">
+    <meta name="description" content="{% block meta_description %}A considered collection of useful things for home, work, and the everyday in between.{% endblock %}">
+    <title>{% block title %}Morrow Supply — Useful things, chosen well{% endblock %}</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/app.js" defer></script>
+  </head>
+  <body class="{% block body_class %}{% endblock %}">
+    <div class="announcement">A small collection for everyday living <span aria-hidden="true">·</span> Always free local delivery in this demo</div>
+    <header class="site-header">
+      <a class="wordmark" href="/" aria-label="Morrow Supply home">morrow<span> supply</span></a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/shop" {% if active_page == 'shop' %}aria-current="page"{% endif %}>Shop</a>
+        <a href="/approach" {% if active_page == 'approach' %}aria-current="page"{% endif %}>Our approach</a>
+        <a href="/contact" {% if active_page == 'contact' %}aria-current="page"{% endif %}>Contact</a>
+      </nav>
+      <a class="bag-link" href="/bag" aria-label="Shopping bag, 0 items" {% if active_page == 'bag' %}aria-current="page"{% endif %}>Bag <span id="bag-count">0</span></a>
+    </header>
+
+    <main id="main-content">
+      {% block content %}{% endblock %}
+    </main>
+
+    <footer class="site-footer">
+      <a class="wordmark footer-wordmark" href="/">morrow<span> supply</span></a>
+      <p>Thoughtful things for ordinary days.</p>
+      <nav aria-label="Footer navigation"><a href="/approach">Approach</a><a href="/contact">Contact</a><a href="/privacy">Privacy</a></nav>
+      <p>Student project demo · Synthetic catalog</p>
+    </footer>
+  </body>
+</html>

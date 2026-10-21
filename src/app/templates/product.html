@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}{{ product.name }} — Morrow Supply{% endblock %}
+{% block meta_description %}{{ product.description }}{% endblock %}
+{% block content %}
+  <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/shop">Shop</a><span aria-hidden="true">/</span><span aria-current="page">{{ product.name }}</span></nav>
+  <section class="product-detail" aria-labelledby="product-title">
+    <div class="detail-art" data-product-art="{{ product.id }}"><svg viewBox="0 0 120 120" aria-hidden="true"></svg></div>
+    <div class="detail-copy">
+      <p class="kicker">{{ product.category }} · Morrow everyday</p>
+      <h1 id="product-title">{{ product.name }}</h1>
+      <p class="detail-price">${{ '%.2f'|format(product.price) }}</p>
+      <p class="detail-description">{{ product.description }}</p>
+      <button class="button button-dark detail-add" type="button" data-add-product="{{ product.id }}">Add to bag <span aria-hidden="true">↗</span></button>
+      <p class="detail-note" id="detail-feedback" role="status" aria-live="polite">A useful everyday piece. Synthetic item in a local student demo.</p>
+      <div class="detail-specs"><p><span>Availability</span><span>In stock for demo</span></p><p><span>Delivery</span><span>Free local demo delivery</span></p><p><span>Returns</span><span>No real orders are placed</span></p></div>
+    </div>
+  </section>
+  <section class="related-section"><div><p class="kicker">More to explore</p><h2>Good company.</h2></div><a class="text-link" href="/shop">Back to the collection <span aria-hidden="true">↗</span></a></section>
+{% endblock %}

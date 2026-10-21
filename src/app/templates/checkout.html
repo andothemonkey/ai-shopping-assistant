@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Demo checkout — Morrow Supply{% endblock %}
+{% block content %}
+  <section class="page-intro compact-intro" aria-labelledby="checkout-title"><p class="kicker">One last look</p><h1 id="checkout-title">Demo checkout.</h1><p>No payment, address, or personal details are requested here.</p></section>
+  <section class="checkout-layout">
+    <div class="checkout-card"><p class="kicker">Review your picks</p><div id="checkout-items" class="checkout-items" aria-live="polite"></div><div class="summary-total"><span>Demo total</span><strong id="checkout-total">$0.00</strong></div>
+      <button class="button button-dark" id="place-demo-order" type="button">Place demo order <span aria-hidden="true">↗</span></button>
+      <p class="demo-disclaimer">This button only clears the local demo bag. It does not contact a payment service or create a real order.</p>
+      <div class="order-confirmation" id="order-confirmation" role="status" aria-live="polite" hidden></div>
+    </div>
+    <aside class="checkout-aside"><p class="kicker">Safe to explore</p><h2>Nothing leaves this demo.</h2><p>Your bag contains only synthetic product IDs saved in this browser. This checkout has no payment fields and sends no order.</p><a class="text-link" href="/privacy">Read the privacy note <span aria-hidden="true">↗</span></a></aside>
+  </section>
+{% endblock %}

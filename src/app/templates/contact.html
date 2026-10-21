@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Contact — Morrow Supply{% endblock %}
+{% block content %}
+  <section class="page-intro" aria-labelledby="contact-title"><p class="kicker">Say hello</p><h1 id="contact-title">We’re listening.</h1><p>This contact form is a local demo and is not connected to an inbox.</p></section>
+  <section class="contact-layout">
+    <div class="contact-copy"><h2>Questions, ideas, or a note?</h2><p>Use the sample form to see the interaction. It clears the fields after submit and does not send or save your message. Please use fictional details only.</p><div class="contact-detail"><span class="kicker">Project status</span><p>Local student prototype<br>Synthetic catalog · No real orders</p></div></div>
+    <form class="contact-form" id="contact-form" autocomplete="off">
+      <label for="contact-name">Name <span>optional</span></label><input id="contact-name" name="name" maxlength="80" autocomplete="off" placeholder="A name for the demo">
+      <label for="contact-email">Email <span>optional</span></label><input id="contact-email" name="email" type="email" maxlength="120" autocomplete="off" placeholder="you@example.test">
+      <label for="contact-message">Message</label><textarea id="contact-message" name="message" maxlength="1000" rows="5" required placeholder="Write a sample message"></textarea>
+      <button class="button button-dark" type="submit">Preview submit <span aria-hidden="true">↗</span></button>
+      <p class="contact-response" id="contact-response" role="status" aria-live="polite"></p>
+      <p class="form-note">Local only. This form does not contact anyone or store submitted text.</p>
+    </form>
+  </section>
+{% endblock %}

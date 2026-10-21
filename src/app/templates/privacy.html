@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Privacy note — Morrow Supply{% endblock %}
+{% block meta_description %}How this local shopping assistant demo handles browser data and form input.{% endblock %}
+{% block content %}
+  <section class="page-intro" aria-labelledby="privacy-title"><p class="kicker">Plain-language project note</p><h1 id="privacy-title">Privacy, for this demo.</h1><p>This is a local student prototype, not an operating store.</p></section>
+  <section class="privacy-content">
+    <article><h2>What the site sends locally</h2><p>Product search terms and shop-guide messages are sent to the FastAPI service running on your computer at <code>127.0.0.1</code>. The current app does not save them to a database. The development server may print request URLs, including product search terms, in its terminal access log; use synthetic text only.</p></article>
+    <article><h2>What stays in your browser</h2><p>The demo bag stores synthetic product IDs and quantities in this browser’s local storage so it survives a refresh. You can clear it from the bag page or clear this site’s browser storage.</p></article>
+    <article><h2>Contact and checkout</h2><p>The contact form clears after its local preview and does not send or persist the entered text. Checkout has no address or payment fields and does not create a real order.</p></article>
+    <article><h2>Use synthetic details only</h2><p>Do not enter real names, email addresses, order information, payment details, or other personal data. The catalog data is synthetic and the shop guide is still a placeholder.</p></article>
+    <p class="privacy-updated">Project note · Last updated 21 October 2026</p>
+  </section>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %}Morrow Supply — Useful things, chosen well{% endblock %}
+{% block content %}
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <p class="kicker"><span class="kicker-rule"></span> The everyday edit · No. 01</p>
+      <h1 id="hero-title">Useful things,<br><em>chosen well.</em></h1>
+      <p class="hero-description">A few dependable pieces for your desk, your commute, and the small routines that make a day.</p>
+      <a class="button button-dark" href="/shop">Browse the collection <span aria-hidden="true">↘</span></a>
+    </div>
+    <div class="hero-still-life" role="img" aria-label="A warm-toned illustration of a travel mug and notebook">
+      <div class="still-life-sun"></div><div class="still-life-table"></div>
+      <div class="still-life-book"><span>notes<br>for later</span></div>
+      <div class="still-life-mug"><span class="mug-handle"></span><span class="mug-rim"></span></div>
+      <div class="still-life-shadow"></div><p class="still-life-caption">Made for the in-between.</p>
+    </div>
+    <div class="hero-footnote"><span>01 / 03</span><span>Well-made basics, without the fuss.</span></div>
+  </section>
+
+  <section class="shop-section home-featured" aria-labelledby="featured-title">
+    <div class="shop-heading">
+      <div><p class="kicker">A good place to start</p><h2 id="featured-title">Keep close. Use often.</h2></div>
+      <a class="text-link" href="/shop">See everything <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="product-grid" id="home-featured" data-product-limit="3" aria-live="polite"></div>
+  </section>
+
+  <section class="home-note">
+    <p class="kicker">Our point of view</p><h2>Buy less.<br><em>Love it longer.</em></h2>
+    <a class="text-link" href="/approach">A little about us <span aria-hidden="true">↗</span></a>
+  </section>
+
+  <section class="assistant-section home-assistant" aria-labelledby="assistant-title">
+    <div class="assistant-heading"><p class="kicker">A little help</p><h2 id="assistant-title">Choosing between things?</h2><p>Ask about the collection. The shop guide is still being put together; search and filters work in the meantime.</p></div>
+    <form class="chat-form" id="chat-form"><label class="sr-only" for="chat-input">Ask the shop guide</label><input id="chat-input" name="message" maxlength="500" placeholder="What are you looking for?" required><button class="button button-dark" type="submit">Ask <span aria-hidden="true">↗</span></button></form>
+    <p class="chat-response" id="chat-response" role="status" aria-live="polite"></p>
+  </section>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Shop the collection — Morrow Supply{% endblock %}
+{% block meta_description %}Browse useful everyday pieces for your desk, kitchen, and commute.{% endblock %}
+{% block content %}
+  <section class="page-intro" aria-labelledby="shop-title">
+    <p class="kicker">The collection · 03 considered pieces</p>
+    <h1 id="shop-title">Find your everyday.</h1>
+    <p>Useful design for the places you spend your time.</p>
+  </section>
+  <section class="shop-section shop-page" aria-label="Product collection">
+    <div class="shop-heading">
+      <div><p class="kicker">Browse all</p><h2>Good things, no fuss.</h2></div>
+      <label class="search-field"><span class="sr-only">Search products</span><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5"></circle><path d="m13 13 4 4"></path></svg><input id="search-input" type="search" maxlength="100" placeholder="Search the collection"></label>
+    </div>
+    <div class="shop-tools">
+      <div class="filters" role="group" aria-label="Filter by category">
+        <button class="filter-chip is-active" type="button" data-category="all" aria-pressed="true">Everything</button>
+        <button class="filter-chip" type="button" data-category="Carry" aria-pressed="false">Carry</button>
+        <button class="filter-chip" type="button" data-category="Kitchen" aria-pressed="false">Kitchen</button>
+        <button class="filter-chip" type="button" data-category="Workspace" aria-pressed="false">Workspace</button>
+      </div>
+      <label class="sort-label">Sort <select id="sort-select"><option value="featured">Featured</option><option value="price-asc">Price: low to high</option><option value="price-desc">Price: high to low</option></select></label>
+      <span class="result-count" id="result-count" aria-live="polite"></span>
+    </div>
+    <div class="product-grid" id="product-grid" aria-live="polite"></div>
+    <p class="empty-state" id="empty-state" hidden>Nothing in this edit matches. Try another search.</p>
+  </section>
+{% endblock %}

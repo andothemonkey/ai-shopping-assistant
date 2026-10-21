@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Your bag — Morrow Supply{% endblock %}
+{% block content %}
+  <section class="page-intro compact-intro" aria-labelledby="bag-title"><p class="kicker">Your picks</p><h1 id="bag-title">The bag.</h1><p>A local demo bag, saved only in this browser.</p></section>
+  <section class="bag-layout" aria-label="Shopping bag">
+    <div class="bag-items" id="bag-items" aria-live="polite"></div>
+    <p class="empty-state bag-empty" id="bag-empty" hidden>Your bag is taking a quiet day. <a href="/shop">Find something useful.</a></p>
+    <aside class="bag-summary"><p class="kicker">Summary</p><div class="summary-line"><span>Subtotal</span><span id="bag-subtotal">$0.00</span></div><div class="summary-line"><span>Delivery</span><span>Free</span></div><div class="summary-total"><span>Total</span><strong id="bag-total">$0.00</strong></div><a class="button button-dark checkout-link" href="/checkout" id="checkout-link">Continue to demo checkout <span aria-hidden="true">↗</span></a><p class="demo-disclaimer">This is a student demo. No payment or real order is processed.</p></aside>
+  </section>
+{% endblock %}
